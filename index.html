@@ -1,62 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ratnajit Chakraborty | Data Analyst Portfolio</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
 
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             margin: 0;
             background: #f5f5f5;
+            color: #1f2937;
         }
 
         header {
             background: #1f2937;
             color: white;
             text-align: center;
-            padding: 50px;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+        }
+
+        header h3 {
+            margin: 0 0 15px;
+            font-weight: normal;
         }
 
         header img {
-            width: 160px;
-            height: 160px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            margin-top: 20px;
+            margin-top: 15px;
             object-fit: cover;
             border: 4px solid white;
         }
 
+        header p {
+            max-width: 700px;
+            margin: 18px auto 0;
+            line-height: 1.6;
+        }
+
         section {
-            padding: 40px;
-            max-width: 900px;
+            max-width: 1050px;
             margin: auto;
+            padding: 30px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
         }
 
         .project {
             background: white;
-            padding: 25px;
-            margin: 20px 0;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .skills span {
-            background: #2563eb;
-            color: white;
-            padding: 8px 14px;
-            margin: 6px;
-            display: inline-block;
-            border-radius: 6px;
+        .project h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .project p {
+            margin: 0 0 15px;
+            line-height: 1.5;
             font-size: 14px;
         }
 
         button {
             background: #2563eb;
             color: white;
-            padding: 10px 20px;
+            padding: 9px 16px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
@@ -67,408 +104,397 @@
             background: #1e40af;
         }
 
+        .skills span {
+            background: #2563eb;
+            color: white;
+            padding: 8px 14px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .contact-links p {
+            margin: 10px 0;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             background: #1f2937;
             color: white;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
-    </style>
+        @media (max-width: 600px) {
+            header {
+                padding: 30px 15px;
+            }
 
+            section {
+                padding: 25px 15px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
-
 <body>
-
 
     <!-- HEADER -->
 
     <header>
-
         <h1>Ratnajit Chakraborty</h1>
-
-        <h3>Data Analyst | Python | SQL | Machine Learning</h3>
+        <h3>Data Analyst | Python | SQL | Power BI | Machine Learning</h3>
 
         <img src="profile.jpg" alt="Ratnajit Chakraborty">
 
         <p>
-            Passionate about using data, statistics and machine learning
-            to solve business problems and generate insights.
+            Data Analyst with experience in Python, SQL, Power BI, statistical
+            analysis, and data-driven business problem solving.
         </p>
-
     </header>
 
 
-    <!-- ABOUT ME -->
+    <!-- ABOUT -->
 
     <section>
-
         <h2>About Me</h2>
 
         <p>
-            I am a data analyst with experience in Python, SQL, Power BI,
-            and statistical analysis. I enjoy working on real-world business
-            problems and building data-driven solutions using machine learning
-            and analytics.
+            I am a Data Analyst with experience in Python, SQL, Power BI, and
+            statistical analysis. I enjoy transforming data into actionable
+            insights and building data-driven solutions for real-world business problems.
         </p>
-
     </section>
 
 
     <!-- PROJECTS -->
 
     <section>
-
         <h2>Projects</h2>
 
+        <div class="projects-grid">
 
-        <!-- 1. SALES DECLINE -->
 
-        <div class="project">
-
-            <h3>Sales Decline Root Cause Analysis (End-to-End Pipeline)</h3>
-
-            <p>
-                Built an end-to-end data pipeline
-                (AWS S3 → Snowflake → Python → Power BI)
-                to analyze a sharp sales decline. Performed time series analysis
-                including YoY, QoQ, rolling averages, and multi-dimensional
-                analysis across regions, products, and sales representatives
-                to identify a systemic business issue.
-            </p>
-
-            <a href="https://github.com/rajhere097/sales-decline-root-cause-analysis" target="_blank">
-                <button>View Project</button>
-            </a>
+            <!-- SALES DECLINE -->
 
             <div class="project">
+                <h3>Sales Decline Root Cause Analysis</h3>
 
-    <h3>Digital Retail Business Analytics – SQL</h3>
+                <p>
+                    Built an end-to-end analytics pipeline using AWS S3,
+                    Snowflake, Python, and Power BI to investigate a sharp
+                    sales decline. Analyzed YoY, QoQ, rolling trends, regions,
+                    products, and sales representatives to identify the root cause.
+                </p>
 
-    <p>
-        Performed end-to-end retail business analysis using SQL to analyze
-        sales performance, customer behavior, product performance, and revenue trends.
-        Used joins, CTEs, aggregations, subqueries, and window functions to answer
-        key business questions and generate actionable insights.
-    </p>
+                <a href="https://github.com/rajhere097/sales-decline-root-cause-analysis"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
 
-    <a href="https://github.com/rajhere097/digital-retail-business-analytics_sql"
-       target="_blank">
-        <button>View Project</button>
-    </a>
 
-</div>
+            <!-- DIGITAL RETAIL SQL -->
+
+            <div class="project">
+                <h3>Digital Retail Business Analytics – SQL</h3>
+
+                <p>
+                    Analyzed sales, customers, products, and revenue trends using
+                    SQL. Applied joins, CTEs, subqueries, aggregations, and window
+                    functions to answer business questions and generate insights.
+                </p>
+
+                <a href="https://github.com/rajhere097/digital-retail-business-analytics_sql"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- RIDE CANCELLATION -->
+
+            <div class="project">
+                <h3>Ride Cancellation & Revenue Loss Analysis</h3>
+
+                <p>
+                    Analyzed ride booking and cancellation data to identify
+                    cancellation patterns, revenue loss, customer behavior, and
+                    operational inefficiencies. Examined factors such as booking
+                    status, vehicle type, payment method, and customer cancellations
+                    to uncover opportunities for improving ride completion and revenue.
+                </p>
+
+                <a href="https://github.com/rajhere097/Uber-Ride-Operations-Analysis"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- FLIGHT PERFORMANCE -->
+
+            <div class="project">
+                <h3>Flight Performance Analysis</h3>
+
+                <p>
+                    Built an end-to-end analytics project using Amazon S3,
+                    Databricks, PySpark, Spark SQL, and Power BI. Analyzed airline
+                    performance, on-time percentages, cancellations, pending flights,
+                    passenger distribution, and destination-level trends.
+                </p>
+
+                <a href="https://github.com/rajhere097/flight-performance-analysis-pyspark-sparksql-powerbi"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- CHOCOLATE SALES -->
+
+            <div class="project">
+                <h3>Chocolate Sales Power BI Dashboard</h3>
+
+                <p>
+                    Built an interactive Power BI dashboard using DAX to analyze
+                    sales performance, including YoY growth, YTD, MTD, MoM trends,
+                    moving averages, and salesperson performance.
+                </p>
+
+                <a href="https://github.com/rajhere097/Chocolate-Sales-Powerbi-Dashboard"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- OCR -->
+
+            <div class="project">
+                <h3>OCR Document Information Extraction</h3>
+
+                <p>
+                    Developed a Python-based solution to extract and process
+                    information from documents using Optical Character Recognition
+                    and automated data extraction techniques.
+                </p>
+
+                <a href="https://github.com/rajhere097/ocr-document-information-extraction"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- E-COMMERCE -->
+
+            <div class="project">
+                <h3>E-Commerce Hypothesis Testing Analysis</h3>
+
+                <p>
+                    Applied statistical techniques including t-tests, ANOVA,
+                    chi-square testing, and A/B testing to analyze customer
+                    behavior and generate data-driven business insights.
+                </p>
+
+                <a href="https://github.com/rajhere097/E-Commerce-Hypothesis-Testing-Analysis"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- SWIGGY -->
+
+            <div class="project">
+                <h3>Swiggy Power BI Dashboard</h3>
+
+                <p>
+                    Built an interactive dashboard to analyze restaurant performance,
+                    customer ratings, delivery time, pricing, cuisines, and
+                    city-level business insights.
+                </p>
+
+                <a href="https://github.com/rajhere097/Swiggy-Power-BI-Dashboard"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- EXCEL -->
+
+            <div class="project">
+                <h3>Excel Customer Data Analysis</h3>
+
+                <p>
+                    Performed data cleaning, customer segmentation, transaction
+                    analysis, revenue analysis, new customer analysis, and Customer
+                    Lifetime Value analysis to generate business recommendations.
+                </p>
+
+                <a href="https://github.com/rajhere097/excel-customer-data-analysis"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- UK BANK -->
+
+            <div class="project">
+                <h3>UK Bank Analysis Dashboard</h3>
+
+                <p>
+                    Built an interactive dashboard to analyze banking and customer
+                    data, identifying trends across key financial metrics and
+                    customer segments.
+                </p>
+
+                <a href="https://github.com/rajhere097/Uk-Bank-Analysis-Interactive-Dashboard"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- PAYROLL -->
+
+            <div class="project">
+                <h3>Payroll Tax Wage Import Automation</h3>
+
+                <p>
+                    Automated payroll predecessor wage processing using Python,
+                    Pandas, and OpenPyXL. Applied tax mappings and multi-quarter
+                    wage calculations to generate ready-to-import Excel files.
+                </p>
+
+                <a href="https://github.com/rajhere097/Payroll-Tax-Wage-Import-Automation---Greenlink"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- AMAZON SENTIMENT -->
+
+            <div class="project">
+                <h3>Amazon Review Sentiment Analysis</h3>
+
+                <p>
+                    Built an NLP pipeline using Databricks and PySpark to analyze
+                    customer reviews. Developed baseline models and fine-tuned a
+                    BERT model to classify reviews as Positive, Neutral, or Negative.
+                </p>
+
+                <a href="https://github.com/rajhere097/Amazon-Review-Sentiment-Analysis-PySpark-NLP-BERT-Fine-Tuning"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- HOT ROLLING -->
+
+            <div class="project">
+                <h3>Hot Rolling Defect Detection</h3>
+
+                <p>
+                    Developed a machine learning solution for defect detection using
+                    Logistic Regression and XGBoost, with feature engineering,
+                    class imbalance handling, hyperparameter tuning, and evaluation.
+                </p>
+
+                <a href="https://github.com/rajhere097/Defect-Detection-in-Hot-Rolling"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- DIABETES -->
+
+            <div class="project">
+                <h3>Diabetes Prediction using Machine Learning</h3>
+
+                <p>
+                    Built and compared Decision Tree and Random Forest models,
+                    applied GridSearchCV for hyperparameter tuning, and evaluated
+                    model performance.
+                </p>
+
+                <a href="https://github.com/rajhere097/Diabetes_Prediction_DT_RF_GridSearchCV"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
+
+
+            <!-- ELECTRIC VEHICLE -->
+
+            <div class="project">
+                <h3>Electric Vehicle Data Analysis</h3>
+
+                <p>
+                    Performed exploratory data analysis using Python to identify
+                    trends, patterns, and insights across key electric vehicle
+                    characteristics.
+                </p>
+
+                <a href="https://github.com/rajhere097/Electric_Vehicle_Data_Analysis_Using_Python"
+                   target="_blank">
+                    <button>View Project</button>
+                </a>
+            </div>
 
         </div>
-
-
-        <!-- 2. RIDE CANCELLATION -->
-
-        <div class="project">
-
-            <h3>Ride Cancellation &amp; Revenue Loss Analysis</h3>
-
-            <p>
-                Operational analysis to understand ride cancellations,
-                customer behavior and operational inefficiencies.
-            </p>
-
-            <a href="https://github.com/rajhere097/Uber-Ride-Operations-Analysis" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-        <!-- FLIGHT PERFORMANCE ANALYSIS -->
-
-<div class="project">
-
-    <h3>Flight Performance Analysis – Amazon S3, Databricks, PySpark, Spark SQL & Power BI</h3>
-
-<p>
-    Built an end-to-end flight performance analysis project using Amazon S3,
-    Databricks, PySpark, Spark SQL, and Power BI. Raw flight and ticket data
-    was stored in Amazon S3 and accessed through Databricks for data processing
-    and analysis.
-</p>
-
-<p>
-    Cleaned and transformed the data using PySpark and Spark SQL, then developed
-    an interactive Power BI dashboard to analyze airline performance, on-time
-    percentages, cancellations, pending flights, passenger distribution, and
-    destination-level trends.
-</p>
-
-<a href="https://github.com/rajhere097/flight-performance-analysis-pyspark-sparksql-powerbi" target="_blank">
-    <button>View Project</button>
-</a>
-
-</div>
-
-
-        <!-- 3. CHOCOLATE SALES POWER BI -->
-
-        <div class="project">
-
-            <h3>Chocolate Sales Power BI Dashboard</h3>
-
-            <p>
-                Built an interactive Power BI dashboard using DAX to analyze sales performance,
-                including YoY growth, YTD, MTD, MoM tracking, moving averages, and salesperson
-                performance analysis.
-            </p>
-
-            <a href="https://github.com/rajhere097/Chocolate-Sales-Powerbi-Dashboard" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-        <!-- OCR DOCUMENT INFORMATION EXTRACTION -->
-
-<div class="project">
-    <h3>OCR Document Information Extraction</h3>
-
-    <p>
-        A Python-based OCR project that extracts and processes information
-        from documents using Optical Character Recognition and data extraction techniques.
-    </p>
-
-    <a href="https://github.com/rajhere097/ocr-document-information-extraction" target="_blank">
-        <button>View Project</button>
-    </a>
-</div>
-
-
-        <!-- 4. E-COMMERCE HYPOTHESIS TESTING -->
-
-        <div class="project">
-
-            <h3>E-Commerce Hypothesis Testing Analysis</h3>
-
-            <p>
-                Statistical analysis of e-commerce customer behavior using
-                t-test, ANOVA, chi-square and A/B testing to generate
-                business insights.
-            </p>
-
-            <a href="https://github.com/rajhere097/E-Commerce-Hypothesis-Testing-Analysis" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-        <!-- 5. SWIGGY POWER BI DASHBOARD -->
-
-<div class="project">
-    <h3>Swiggy Power BI Dashboard</h3>
-
-    <p>
-        Interactive Power BI dashboard analyzing restaurant performance,
-        customer ratings, delivery time, pricing, cuisines, and city-level insights.
-    </p>
-
-    <a href="https://github.com/rajhere097/Swiggy-Power-BI-Dashboard" target="_blank">
-        <button>View Project</button>
-    </a>
-</div>
-
-                </div>
-
-        <!-- 5. EXCEL CUSTOMER DATA ANALYSIS -->
-
-        <div class="project">
-
-            <h3>Excel Customer Data Analysis</h3>
-
-            <p>
-                An end-to-end customer data analysis project using Microsoft Excel.
-                Performed data cleaning, customer segmentation, transaction and sales
-                analysis, new customer analysis, revenue analysis, and Customer
-                Lifetime Value (CLV) analysis to identify key business insights and
-                provide data-driven recommendations.
-            </p>
-
-            <a href="https://github.com/rajhere097/excel-customer-data-analysis" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-        <!-- 6. UK BANK ANALYSIS -->
-
-        <div class="project">
-
-
-        <!-- 5. UK BANK ANALYSIS -->
-
-        <div class="project">
-
-            <h3>UK Bank Analysis Interactive Dashboard</h3>
-
-            <p>
-                Built an interactive dashboard to analyze UK banking data,
-                uncovering trends and insights across key financial and
-                customer metrics.
-            </p>
-
-            <a href="https://github.com/rajhere097/Uk-Bank-Analysis-Interactive-Dashboard" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-
-        <!-- 6. PAYROLL AUTOMATION -->
-
-        <div class="project">
-
-            <h3>Payroll Tax Wage Import Automation</h3>
-
-            <p>
-                Automated payroll predecessor wage processing using Python,
-                Pandas, and OpenPyXL. Applied payroll tax mappings and
-                multi-quarter wage calculations to generate formatted,
-                ready-to-import Excel files, reducing repetitive manual
-                processing and improving accuracy.
-            </p>
-
-            <a href="https://github.com/rajhere097/Payroll-Tax-Wage-Import-Automation---Greenlink" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-
-        <!-- 7. AMAZON REVIEW SENTIMENT ANALYSIS -->
-
-        <div class="project">
-
-            <h3>Amazon Review Sentiment Analysis – PySpark, NLP &amp; BERT</h3>
-
-            <p>
-                Built an end-to-end sentiment analysis project using Databricks
-                and PySpark to process Amazon product reviews. Developed an NLP
-                pipeline using TF-IDF and Logistic Regression as a baseline model,
-                then fine-tuned a BERT transformer to classify reviews as
-                Positive, Neutral, or Negative.
-            </p>
-
-            <p>
-                The project includes data preprocessing, text cleaning,
-                model training, evaluation, and testing the trained BERT
-                model on new customer reviews.
-            </p>
-
-            <a href="https://github.com/rajhere097/Amazon-Review-Sentiment-Analysis-PySpark-NLP-BERT-Fine-Tuning" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-
-        <!-- 8. HOT ROLLING DEFECT DETECTION -->
-
-        <div class="project">
-
-            <h3>Hot Rolling Defect Detection – Machine Learning</h3>
-
-            <p>
-                Developed an end-to-end machine learning solution for defect
-                detection in hot rolling. Compared Logistic Regression and
-                XGBoost while applying feature engineering, class imbalance
-                handling, hyperparameter tuning, and model evaluation focused
-                on high defect recall.
-            </p>
-
-            <a href="https://github.com/rajhere097/Defect-Detection-in-Hot-Rolling" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-
-        <!-- 9. DIABETES PREDICTION -->
-
-        <div class="project">
-
-            <h3>Diabetes Prediction using Machine Learning</h3>
-
-            <p>
-                Built and compared Decision Tree and Random Forest models
-                for diabetes prediction. Applied GridSearchCV for
-                hyperparameter tuning and evaluated model performance.
-            </p>
-
-            <a href="https://github.com/rajhere097/Diabetes_Prediction_DT_RF_GridSearchCV" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
-
-        <!-- 10. ELECTRIC VEHICLE ANALYSIS -->
-
-        <div class="project">
-
-            <h3>Electric Vehicle Data Analysis</h3>
-
-            <p>
-                Exploratory data analysis of electric vehicle data using Python
-                to identify trends, patterns, and insights across key vehicle
-                characteristics.
-            </p>
-
-            <a href="https://github.com/rajhere097/Electric_Vehicle_Data_Analysis_Using_Python" target="_blank">
-                <button>View Project</button>
-            </a>
-
-        </div>
-
     </section>
 
 
     <!-- SKILLS -->
 
     <section>
-
         <h2>Skills</h2>
 
         <div class="skills">
-
             <span>Python</span>
             <span>SQL</span>
             <span>Power BI</span>
             <span>DAX</span>
+            <span>Excel</span>
+            <span>AWS S3</span>
+            <span>PySpark</span>
+            <span>Spark SQL</span>
+            <span>Databricks</span>
+            <span>Snowflake</span>
             <span>Machine Learning</span>
             <span>Statistics</span>
             <span>A/B Testing</span>
             <span>Data Visualization</span>
-
         </div>
-
     </section>
 
 
     <!-- RESUME -->
 
     <section>
-
         <h2>Resume</h2>
 
         <a href="resume.pdf">
             <button>Download Resume</button>
         </a>
-
     </section>
 
 
     <!-- CONTACT -->
 
-    <section>
-
+    <section class="contact-links">
         <h2>Contact</h2>
 
         <p>
@@ -480,30 +506,27 @@
 
         <p>
             LinkedIn:
-            <a href="https://www.linkedin.com/in/ratnajit-chakraborty-076ab520a" target="_blank">
-                linkedin.com/in/ratnajit-chakraborty-076ab520a
+            <a href="https://www.linkedin.com/in/ratnajit-chakraborty-076ab520a"
+               target="_blank">
+                View LinkedIn Profile
             </a>
         </p>
 
         <p>
             GitHub:
-            <a href="https://github.com/rajhere097" target="_blank">
+            <a href="https://github.com/rajhere097"
+               target="_blank">
                 github.com/rajhere097
             </a>
         </p>
-
     </section>
 
 
     <!-- FOOTER -->
 
     <footer>
-
         <p>© 2026 Ratnajit Chakraborty</p>
-
     </footer>
 
-
 </body>
-
 </html>
