@@ -1,7 +1,5 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +7,6 @@
     <title>Ratnajit Chakraborty | Data Analyst Portfolio</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -19,126 +16,181 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
+            background: #f4f6f9;
+            color: #172033;
             line-height: 1.6;
         }
 
+        /* ================= HEADER ================= */
+
         header {
-            background: linear-gradient(135deg, #111827, #1e3a8a);
+            background: linear-gradient(135deg, #101b3a, #203f88);
             color: white;
-            padding: 80px 20px;
             text-align: center;
+            padding: 70px 20px 80px;
         }
 
-        header img {
-            width: 140px;
-            height: 140px;
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
             border-radius: 50%;
-            object-fit: cover;
+            overflow: hidden;
             border: 4px solid white;
-            margin-bottom: 20px;
+            background: #203f88;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+            font-size: 44px;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
         header p {
             font-size: 20px;
-            opacity: 0.9;
+            color: #e8edf9;
         }
 
+        /* ================= NAVIGATION ================= */
+
         nav {
-            background: #111827;
-            padding: 15px;
-            text-align: center;
+            background: #0d1426;
             position: sticky;
             top: 0;
             z-index: 1000;
+            text-align: center;
+            padding: 17px 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin: 0 18px;
+            font-weight: 600;
+            font-size: 16px;
         }
 
         nav a:hover {
-            color: #60a5fa;
+            color: #8db7ff;
         }
 
+        /* ================= GENERAL ================= */
+
         section {
-            max-width: 1150px;
-            margin: auto;
             padding: 70px 20px;
         }
 
-        section h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: #111827;
+        .container {
+            max-width: 1150px;
+            margin: auto;
         }
 
-        .about {
+        .section-title {
             text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #13264d;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #667085;
+            font-size: 16px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        #about {
+            background: #ffffff;
+        }
+
+        .about-text {
             max-width: 900px;
             margin: auto;
+            text-align: center;
             font-size: 18px;
+            color: #475467;
         }
 
-        .projects {
+        /* ================= PROJECTS ================= */
+
+        #projects {
+            background: #f4f6f9;
+        }
+
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .project {
+        .project-card {
             background: white;
             padding: 28px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            display: flex;
+            flex-direction: column;
+            transition: 0.25s ease;
         }
 
-        .project:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
         }
 
-        .project h3 {
-            color: #1e3a8a;
+        .project-card h3 {
+            color: #1d4f91;
+            font-size: 20px;
             margin-bottom: 12px;
-            font-size: 21px;
         }
 
-        .project p {
-            color: #4b5563;
-            margin-bottom: 18px;
+        .project-card p {
+            color: #596579;
+            font-size: 15px;
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
-        .project a {
-            text-decoration: none;
-        }
-
-        .project button {
-            background: #1e3a8a;
+        .project-btn {
+            display: inline-block;
+            width: fit-content;
+            background: #1d4f91;
             color: white;
-            border: none;
-            padding: 10px 18px;
+            text-decoration: none;
+            padding: 9px 17px;
             border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 600;
         }
 
-        .project button:hover {
-            background: #2563eb;
+        .project-btn:hover {
+            background: #143867;
         }
 
-        .skills {
+        /* ================= SKILLS ================= */
+
+        #skills {
+            background: white;
+        }
+
+        .skills-container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -146,57 +198,95 @@
         }
 
         .skill {
-            background: white;
-            padding: 10px 18px;
+            background: #eaf1fb;
+            color: #1d4f91;
+            padding: 9px 17px;
             border-radius: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 600;
         }
 
-        .resume {
+        /* ================= RESUME ================= */
+
+        #resume {
+            background: #f4f6f9;
             text-align: center;
         }
 
-        .resume a {
+        .resume-btn {
             display: inline-block;
-            background: #1e3a8a;
+            background: #1d4f91;
             color: white;
-            padding: 13px 25px;
-            border-radius: 7px;
+            padding: 12px 25px;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 7px;
+            font-weight: 600;
         }
 
-        .resume a:hover {
-            background: #2563eb;
+        .resume-btn:hover {
+            background: #143867;
         }
 
-        .contact {
+        /* ================= CONTACT ================= */
+
+        #contact {
+            background: white;
             text-align: center;
         }
 
-        .contact p {
-            margin: 10px 0;
-            font-size: 17px;
+        .contact-links {
+            margin-top: 20px;
         }
 
-        .contact a {
-            color: #1e3a8a;
+        .contact-links a {
+            color: #1d4f91;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            margin: 0 12px;
         }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= FOOTER ================= */
 
         footer {
-            background: #111827;
+            background: #0d1426;
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 28px 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #c7cfdf;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 600px) {
+            header {
+                padding: 55px 15px 65px;
+            }
 
             header h1 {
                 font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .profile-photo {
+                width: 125px;
+                height: 125px;
             }
 
             nav a {
@@ -204,21 +294,30 @@
                 font-size: 14px;
             }
 
+            section {
+                padding: 55px 15px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
 
     <header>
 
-        <img src="yourphoto.jpg" alt="Ratnajit Chakraborty">
+        <div class="profile-photo">
+            <img src="profile.jpg" alt="Ratnajit Chakraborty">
+        </div>
 
         <h1>Ratnajit Chakraborty</h1>
 
@@ -229,499 +328,339 @@
     </header>
 
 
-    <!-- NAVIGATION -->
+    <!-- ================= NAVIGATION ================= -->
 
     <nav>
-
         <a href="#about">About</a>
-
         <a href="#projects">Projects</a>
-
         <a href="#skills">Skills</a>
-
         <a href="#resume">Resume</a>
-
         <a href="#contact">Contact</a>
-
     </nav>
 
 
-    <!-- ABOUT -->
+    <!-- ================= ABOUT ================= -->
 
     <section id="about">
 
-        <h2>About Me</h2>
+        <div class="container">
 
-        <div class="about">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
 
-            <p>
-                Data Analyst with experience in SQL, Power BI, Excel, Python,
-                PySpark, Databricks and data analytics, with hands-on experience
-                building ETL pipelines and working with AWS S3 and Delta Lake.
-            </p>
+            <div class="about-text">
 
-            <br>
+                <p>
+                    Data Analyst with experience in SQL, Power BI, Excel, Python,
+                    PySpark, Databricks and data analytics. Hands-on experience
+                    building ETL pipelines, working with AWS S3 and Delta Lake,
+                    and developing business intelligence dashboards.
+                </p>
 
-            <p>
-                I focus on transforming raw business data into structured,
-                reliable datasets and actionable dashboards that support
-                business decision-making.
-            </p>
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- ================= PROJECTS ================= -->
 
     <section id="projects">
 
-        <h2>Projects</h2>
+        <div class="container">
 
-        <div class="projects">
-
-
-            <!-- 1. DATABRICKS DELTA PIPELINE -->
-
-            <div class="project">
-
-                <h3>
-                    1. Databricks Delta Pipeline ETL
-                </h3>
-
+            <div class="section-title">
+                <h2>Projects</h2>
                 <p>
-                    End-to-end ETL pipeline using AWS S3, Databricks, PySpark
-                    and Delta Lake. Reads raw Bronze Delta data from S3,
-                    transforms the data through Silver and Gold layers,
-                    applies structural transformations and data-quality
-                    processing, and exposes curated datasets for Power BI
-                    reporting.
+                    Selected data analytics, business intelligence,
+                    ETL and machine learning projects.
                 </p>
-
-                <a
-                    href="https://github.com/rajhere097/databricks-delta-pipeline-etl"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
             </div>
 
 
-            <!-- 2. TABLEAU BUSINESS INTELLIGENCE -->
+            <div class="projects-grid">
 
-            <div class="project">
 
-                <h3>
-                    2. Tableau Business Intelligence Projects
-                </h3>
+                <!-- PROJECT 1 -->
 
-                <p>
-                    Business intelligence reporting projects using Tableau
-                    to analyze business performance, trends, KPIs and
-                    operational metrics through interactive dashboards
-                    and visual analytics.
-                </p>
+                <div class="project-card">
 
-                <a
-                    href="https://github.com/rajhere097/tableau-business-intelligence-projectsreport"
-                    target="_blank">
+                    <h3>
+                        Databricks Delta Pipeline — ETL
+                    </h3>
 
-                    <button>
+                    <p>
+                        End-to-end ETL pipeline using Python, PySpark,
+                        AWS S3, Delta Lake and Databricks. The pipeline
+                        implements Bronze, Silver and Gold data layers
+                        and connects curated data with Power BI for
+                        business reporting.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097/databricks-delta-pipeline-etl"
+                        target="_blank">
                         View Project
-                    </button>
+                    </a>
 
-                </a>
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Tableau Business Intelligence Projects
+                    </h3>
+
+                    <p>
+                        Business intelligence projects using Tableau to
+                        transform analytical datasets into interactive
+                        dashboards and business-focused visual insights.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097/tableau-business-intelligence-projects"
+                        target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        K-Means Game Sales Segmentation
+                    </h3>
+
+                    <p>
+                        Machine learning project using Python and K-Means
+                        clustering to segment game sales data and identify
+                        meaningful patterns across the dataset.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097/KMeans_Clustering_GameSales_Segmentation"
+                        target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Swiggy Power BI Dashboard
+                    </h3>
+
+                    <p>
+                        Interactive Power BI dashboard analyzing restaurant
+                        count, ratings, delivery time, pricing, cuisines
+                        and city-level restaurant performance.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097/Swiggy-Power-BI-Dashboard"
+                        target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 5 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Digital Retail Business Analytics — SQL
+                    </h3>
+
+                    <p>
+                        SQL-based retail analytics project focused on
+                        business performance, customer behavior, sales
+                        analysis and analytical SQL techniques.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097/digital-retail-business-analytics_sql"
+                        target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 6 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Electric Vehicle Data Analysis — Python & OOP
+                    </h3>
+
+                    <p>
+                        Electric vehicle data analysis using Python and
+                        object-oriented programming, including data
+                        exploration, reusable classes and visualization.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097"
+                        target="_blank">
+                        View GitHub
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 7 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Payroll Automation
+                    </h3>
+
+                    <p>
+                        Python-based payroll automation project for
+                        transforming, mapping and preparing predecessor
+                        wage data for payroll import workflows.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097"
+                        target="_blank">
+                        View GitHub
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 8 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        E-Commerce Hypothesis Testing
+                    </h3>
+
+                    <p>
+                        Statistical analysis of e-commerce data using
+                        hypothesis testing techniques to evaluate business
+                        questions and support data-driven decisions.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097"
+                        target="_blank">
+                        View GitHub
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 9 -->
+
+                <div class="project-card">
+
+                    <h3>
+                        Business Analytics & SQL Projects
+                    </h3>
+
+                    <p>
+                        Additional analytics projects covering SQL,
+                        business performance analysis, reporting,
+                        segmentation and data-driven insights.
+                    </p>
+
+                    <a
+                        class="project-btn"
+                        href="https://github.com/rajhere097"
+                        target="_blank">
+                        View GitHub
+                    </a>
+
+                </div>
+
 
             </div>
-
-
-            <!-- 3. SWIGGY POWER BI -->
-
-            <div class="project">
-
-                <h3>
-                    3. Swiggy Power BI Dashboard
-                </h3>
-
-                <p>
-                    Interactive Power BI dashboard analyzing restaurant
-                    performance, ratings, delivery time, pricing, cuisine
-                    trends and city-level restaurant distribution using
-                    KPI-driven visualizations.
-                </p>
-
-                <a
-                    href="https://github.com/rajhere097/Swiggy-Power-BI-Dashboard"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 4. SALES DECLINE -->
-
-            <div class="project">
-
-                <h3>
-                    4. Sales Decline Root Cause Analysis
-                </h3>
-
-                <p>
-                    Analyzed a 5.4% revenue decline between July and August
-                    by combining sales and product data across enterprise
-                    sources. Identified regional and category-level
-                    performance patterns and highlighted major contributors
-                    to the decline.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 5. HOT ROLLING -->
-
-            <div class="project">
-
-                <h3>
-                    5. Hot Rolling Defect Detection
-                </h3>
-
-                <p>
-                    Machine learning project focused on detecting manufacturing
-                    defects using production-process data. Built an analytical
-                    workflow for exploratory analysis, feature preparation,
-                    model training and evaluation.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 6. K-MEANS GAME SALES -->
-
-            <div class="project">
-
-                <h3>
-                    6. K-Means Game Sales Segmentation
-                </h3>
-
-                <p>
-                    Unsupervised machine learning project using K-Means
-                    clustering to segment video game titles based on
-                    regional and global sales patterns and identify
-                    distinct market segments.
-                </p>
-
-                <a
-                    href="https://github.com/rajhere097/KMeans_Clustering_GameSales_Segmentation/blob/main/KMeans_Clustering_GameSales_Segmentation.ipynb"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 7. PAYROLL AUTOMATION -->
-
-            <div class="project">
-
-                <h3>
-                    7. Payroll Tax Wage Import Automation
-                </h3>
-
-                <p>
-                    Automated payroll predecessor-wage import processing
-                    using Python, Pandas and Excel automation. Applied
-                    business rules, mapped tax fields, populated
-                    employee-level records and generated validated
-                    import-ready output files.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 8. E-COMMERCE HYPOTHESIS TESTING -->
-
-            <div class="project">
-
-                <h3>
-                    8. E-Commerce Hypothesis Testing
-                </h3>
-
-                <p>
-                    Performed statistical hypothesis testing on e-commerce
-                    business data to evaluate differences in customer and
-                    sales behavior and translate statistical results into
-                    business insights.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 9. DIGITAL RETAIL SQL -->
-
-            <div class="project">
-
-                <h3>
-                    9. Digital Retail Business Analytics — SQL
-                </h3>
-
-                <p>
-                    Analyzed digital retail data using SQL to generate
-                    business insights across sales, customers, products
-                    and revenue. Applied joins, aggregations, subqueries,
-                    CTEs and window functions to solve analytical
-                    business questions.
-                </p>
-
-                <a
-                    href="https://github.com/rajhere097/digital-retail-business-analytics_sql"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 10. RIDE CANCELLATION -->
-
-            <div class="project">
-
-                <h3>
-                    10. Ride Cancellation & Revenue Loss Analysis
-                </h3>
-
-                <p>
-                    Analyzed ride cancellations by time, zone and vehicle
-                    category to identify operational patterns,
-                    driver-availability gaps and revenue-impacting
-                    cancellation trends.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 11. CHOCOLATE SALES -->
-
-            <div class="project">
-
-                <h3>
-                    11. Chocolate Sales Power BI Dashboard
-                </h3>
-
-                <p>
-                    Interactive Power BI dashboard analyzing chocolate
-                    sales, revenue, products, regions, sales representatives
-                    and business performance using KPI-driven
-                    visualizations.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 12. DIABETES PREDICTION -->
-
-            <div class="project">
-
-                <h3>
-                    12. Diabetes Prediction
-                </h3>
-
-                <p>
-                    Machine learning classification project involving
-                    exploratory data analysis, feature preparation,
-                    model training and evaluation for diabetes prediction.
-                </p>
-
-                <a
-                    href="#"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
-
-            <!-- 13. ELECTRIC VEHICLE -->
-
-            <div class="project">
-
-                <h3>
-                    13. Electric Vehicle Data Analysis — Python & OOP
-                </h3>
-
-                <p>
-                    Analyzed electric vehicle data using Python and
-                    object-oriented programming (OOP), applying data
-                    cleaning, exploratory analysis, reusable Python
-                    classes and data visualization to identify market
-                    trends, vehicle characteristics and key insights.
-                </p>
-
-                <a
-                    href="https://github.com/rajhere097/Electric_Vehicle_Data_Analysis_Using_Python"
-                    target="_blank">
-
-                    <button>
-                        View Project
-                    </button>
-
-                </a>
-
-            </div>
-
 
         </div>
 
     </section>
 
 
-    <!-- SKILLS -->
+    <!-- ================= SKILLS ================= -->
 
     <section id="skills">
 
-        <h2>Technical Skills</h2>
+        <div class="container">
 
-        <div class="skills">
+            <div class="section-title">
 
-            <div class="skill">
-                SQL
+                <h2>Technical Skills</h2>
+
+                <p>
+                    Technologies and tools used across my projects.
+                </p>
+
             </div>
 
-            <div class="skill">
-                Power BI
-            </div>
 
-            <div class="skill">
-                Advanced Excel
-            </div>
+            <div class="skills-container">
 
-            <div class="skill">
-                Python
-            </div>
+                <div class="skills-list">
 
-            <div class="skill">
-                Pandas
-            </div>
+                    <span class="skill">SQL</span>
 
-            <div class="skill">
-                PySpark
-            </div>
+                    <span class="skill">Python</span>
 
-            <div class="skill">
-                Databricks
-            </div>
+                    <span class="skill">PySpark</span>
 
-            <div class="skill">
-                Delta Lake
-            </div>
+                    <span class="skill">Pandas</span>
 
-            <div class="skill">
-                AWS S3
-            </div>
+                    <span class="skill">Power BI</span>
 
-            <div class="skill">
-                ETL
-            </div>
+                    <span class="skill">Tableau</span>
 
-            <div class="skill">
-                Data Analysis
-            </div>
+                    <span class="skill">Databricks</span>
 
-            <div class="skill">
-                Data Visualization
-            </div>
+                    <span class="skill">Delta Lake</span>
 
-            <div class="skill">
-                Machine Learning
-            </div>
+                    <span class="skill">AWS S3</span>
 
-            <div class="skill">
-                Tableau
-            </div>
+                    <span class="skill">Snowflake</span>
 
-            <div class="skill">
-                Git & GitHub
+                    <span class="skill">ETL</span>
+
+                    <span class="skill">Data Analysis</span>
+
+                    <span class="skill">Data Visualization</span>
+
+                    <span class="skill">Machine Learning</span>
+
+                    <span class="skill">Advanced Excel</span>
+
+                </div>
+
             </div>
 
         </div>
@@ -729,22 +668,27 @@
     </section>
 
 
-    <!-- RESUME -->
+    <!-- ================= RESUME ================= -->
 
     <section id="resume">
 
-        <h2>
-            Resume
-        </h2>
+        <div class="container">
 
-        <div class="resume">
+            <div class="section-title">
+
+                <h2>Resume</h2>
+
+                <p>
+                    View my professional experience, skills and projects.
+                </p>
+
+            </div>
 
             <a
-                href="resume.pdf"
-                download>
-
-                Download Resume
-
+                class="resume-btn"
+                href="https://github.com/rajhere097"
+                target="_blank">
+                View Resume / GitHub
             </a>
 
         </div>
@@ -752,59 +696,54 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- ================= CONTACT ================= -->
 
     <section id="contact">
 
-        <h2>
-            Contact
-        </h2>
+        <div class="container">
 
-        <div class="contact">
+            <div class="section-title">
 
-            <p>
-                GitHub:
+                <h2>Contact</h2>
+
+                <p>
+                    Feel free to connect with me.
+                </p>
+
+            </div>
+
+
+            <div class="contact-links">
+
                 <a
                     href="https://github.com/rajhere097"
                     target="_blank">
-                    github.com/rajhere097
+                    GitHub
                 </a>
-            </p>
 
-            <p>
-                LinkedIn:
                 <a
-                    href="#"
+                    href="https://www.linkedin.com/"
                     target="_blank">
-                    LinkedIn Profile
+                    LinkedIn
                 </a>
-            </p>
 
-            <p>
-                Email:
-                <a
-                    href="mailto:your-email@example.com">
-                    your-email@example.com
-                </a>
-            </p>
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            © 2026 Ratnajit Chakraborty. All Rights Reserved.
+            © 2026 Ratnajit Chakraborty. All rights reserved.
         </p>
 
     </footer>
 
 
 </body>
-
 </html>
-```
