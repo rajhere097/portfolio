@@ -1,627 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ratnajit Chakraborty | Data Analyst Portfolio</title>
+<title>Ratnajit Chakraborty | Data Analyst</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-            color: #172033;
-        }
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
 
-        body {
-            display: flex;
-            flex-direction: column;
-        }
+/* =========================
+   HERO
+========================= */
 
-        /* =========================
-           HEADER
-           ========================= */
+.hero {
+    height: 24vh;
+    background: linear-gradient(135deg, #172b61, #294d96);
+    color: white;
 
-        .hero {
-            height: 31vh;
-            min-height: 230px;
-            background: linear-gradient(135deg, #172554, #294c96);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 15px 20px;
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        .profile-photo {
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            margin-bottom: 10px;
-        }
+    text-align: center;
+}
 
-        .hero h1 {
-            font-size: 34px;
-            margin-bottom: 7px;
-            font-weight: 700;
-        }
+.profile-photo {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 7px;
+}
 
-        .hero .role {
-            font-size: 17px;
-            opacity: 0.95;
-        }
+.hero h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
 
-        /* =========================
-           NAVIGATION
-           ========================= */
+.hero p {
+    font-size: 16px;
+}
 
-        nav {
-            height: 7vh;
-            min-height: 48px;
-            background: #0d172a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 38px;
-        }
+/* =========================
+   NAVIGATION
+========================= */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-        }
+nav {
+    height: 6vh;
+    min-height: 42px;
 
-        nav a:hover {
-            color: #8db5ff;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
 
-        /* =========================
-           MAIN AREA
-           ========================= */
+    background: #0d172a;
+}
 
-        .main {
-            height: 62vh;
-            padding: 18px 35px 20px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
 
-        /* =========================
-           ABOUT
-           ========================= */
+nav a:hover {
+    color: #8db5ff;
+}
 
-        .about {
-            text-align: center;
-            margin-bottom: 15px;
-        }
+/* =========================
+   MAIN
+========================= */
 
-        .about h2 {
-            font-size: 23px;
-            color: #21539a;
-            margin-bottom: 7px;
-        }
+main {
+    height: 64vh;
+    padding: 12px 38px 8px;
 
-        .about p {
-            max-width: 1050px;
-            margin: auto;
-            font-size: 14px;
-            line-height: 1.45;
-            color: #46546a;
-        }
+    display: flex;
+    flex-direction: column;
 
-        /* =========================
-           PROJECTS
-           ========================= */
+    overflow: hidden;
+}
 
-        .projects-title {
-            text-align: center;
-            font-size: 23px;
-            color: #21539a;
-            margin-bottom: 12px;
-        }
+/* =========================
+   ABOUT
+========================= */
 
-        .projects-grid {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 12px;
-            min-height: 0;
-        }
+.about {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-        .project-card {
-            background: white;
-            border: 1px solid #dce4ef;
-            border-radius: 10px;
-            padding: 14px 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 2px 8px rgba(20, 40, 80, 0.06);
-            min-height: 0;
-        }
+.about h2 {
+    color: #24579d;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
 
-        .project-card:hover {
-            border-color: #2861ad;
-            box-shadow: 0 4px 14px rgba(20, 60, 120, 0.12);
-        }
+.about p {
+    max-width: 1100px;
+    margin: auto;
 
-        .project-card h3 {
-            font-size: 16px;
-            line-height: 1.25;
-            color: #20549a;
-            margin-bottom: 6px;
-        }
+    font-size: 13px;
+    line-height: 1.35;
+    color: #4c5a70;
+}
 
-        .project-card p {
-            font-size: 12px;
-            line-height: 1.4;
-            color: #596579;
-            margin-bottom: 7px;
-        }
+/* =========================
+   PROJECTS
+========================= */
 
-        .tech {
-            font-size: 10.5px;
-            font-weight: 600;
-            color: #263f68;
-            line-height: 1.35;
-            margin-bottom: 8px;
-        }
+.projects-heading {
+    text-align: center;
+    color: #24579d;
+    font-size: 21px;
+    margin-bottom: 9px;
+}
 
-        .btn {
-            display: block;
-            text-align: center;
-            background: #255ca5;
-            color: white;
-            text-decoration: none;
-            padding: 7px 10px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-        }
+/* =========================
+   PROJECT GRID
+========================= */
 
-        .btn:hover {
-            background: #173f78;
-        }
+.projects-grid {
+    flex: 1;
 
-        /* =========================
-           SKILLS
-           ========================= */
+    display: grid;
 
-        .skills {
-            height: 6vh;
-            min-height: 42px;
-            background: #ffffff;
-            border-top: 1px solid #dce4ef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 5px 15px;
-        }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
 
-        .skill {
-            background: #edf3fb;
-            color: #24508c;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 10.5px;
-            font-weight: 600;
-        }
+    gap: 11px;
 
-        /* =========================
-           RESPONSIVE
-           ========================= */
+    min-height: 0;
+}
 
-        @media (max-width: 1100px) {
+/* =========================
+   PROJECT CARD
+========================= */
 
-            .hero {
-                height: 28vh;
-            }
+.project-card {
+    background: white;
 
-            .main {
-                height: 65vh;
-                padding: 14px 20px;
-            }
+    border: 1px solid #dbe3ef;
+    border-radius: 9px;
 
-            .projects-grid {
-                gap: 9px;
-            }
+    padding: 12px 14px;
 
-            .project-card {
-                padding: 11px 12px;
-            }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-            .project-card h3 {
-                font-size: 14px;
-            }
+    min-height: 0;
 
-            .project-card p {
-                font-size: 10.5px;
-            }
+    box-shadow: 0 2px 7px rgba(20, 45, 90, 0.06);
+}
 
-            .tech {
-                font-size: 9px;
-            }
+.project-card:hover {
+    border-color: #2a61aa;
+    box-shadow: 0 4px 12px rgba(20, 55, 110, 0.12);
+}
 
-            .btn {
-                font-size: 10px;
-                padding: 6px;
-            }
-        }
+.project-card h3 {
+    color: #20579f;
 
-        @media (max-width: 800px) {
+    font-size: 15px;
+    line-height: 1.2;
 
-            html, body {
-                overflow: auto;
-                height: auto;
-            }
+    margin-bottom: 5px;
+}
 
-            .hero {
-                height: auto;
-                padding: 25px 15px;
-            }
+.project-card p {
+    color: #58667a;
 
-            nav {
-                height: auto;
-                padding: 13px;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
+    font-size: 11px;
+    line-height: 1.35;
 
-            .main {
-                height: auto;
-                overflow: visible;
-            }
+    margin-bottom: 5px;
+}
 
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: auto;
-            }
+.tech {
+    color: #234b80;
 
-            .skills {
-                height: auto;
-                flex-wrap: wrap;
-                padding: 10px;
-            }
-        }
+    font-size: 9.5px;
+    line-height: 1.25;
 
-        @media (max-width: 500px) {
+    font-weight: 600;
 
-            .hero h1 {
-                font-size: 27px;
-            }
+    margin-bottom: 7px;
+}
 
-            .hero .role {
-                font-size: 14px;
-            }
+.btn {
+    display: block;
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    width: 100%;
+
+    text-align: center;
+
+    background: #2860a8;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 6px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #173f78;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    height: 6vh;
+    min-height: 40px;
+
+    background: white;
+
+    border-top: 1px solid #dce4ef;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 4px 15px;
+}
+
+.skill {
+    background: #edf3fb;
+
+    color: #24518c;
+
+    padding: 4px 9px;
+
+    border-radius: 14px;
+
+    font-size: 9.5px;
+    font-weight: 600;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        height: 22vh;
+    }
+
+    .profile-photo {
+        width: 68px;
+        height: 68px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    main {
+        height: 66vh;
+        padding: 10px 20px 7px;
+    }
+
+    .projects-grid {
+        gap: 8px;
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 13px;
+    }
+
+    .project-card p {
+        font-size: 10px;
+    }
+
+    .tech {
+        font-size: 8.5px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    html,
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .hero {
+        height: auto;
+        padding: 25px 15px;
+    }
+
+    nav {
+        height: auto;
+        padding: 12px;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        height: auto;
+        overflow: visible;
+        padding: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .project-card {
+        min-height: 170px;
+    }
+
+    .skills {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+}
+</style>
 </head>
+
 
 <body>
 
-    <!-- =========================
-         HERO
-         ========================= -->
+<!-- =========================
+     HERO
+========================= -->
 
-    <header class="hero">
+<header class="hero">
 
-        <!-- Keep your existing profile.jpg in the repository -->
-        <img src="profile.jpg"
-             alt="Ratnajit Chakraborty"
-             class="profile-photo">
+    <img
+        src="profile.jpg"
+        alt="Ratnajit Chakraborty"
+        class="profile-photo"
+    >
 
-        <h1>Ratnajit Chakraborty</h1>
+    <h1>Ratnajit Chakraborty</h1>
 
-        <div class="role">
-            Data Analyst | SQL | Power BI | Python | PySpark | Databricks | Delta Lake
+    <p>
+        Data Analyst | SQL | Power BI | Python | PySpark | Databricks | Delta Lake
+    </p>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="#about">About</a>
+
+    <a href="#projects">Projects</a>
+
+    <a href="#skills">Skills</a>
+
+    <a
+        href="https://github.com/rajhere097"
+        target="_blank"
+    >
+        GitHub
+    </a>
+
+    <a href="mailto:your-email@example.com">
+        Contact
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+    <!-- ABOUT -->
+
+    <section
+        class="about"
+        id="about"
+    >
+
+        <h2>About Me</h2>
+
+        <p>
+            Data Analyst with experience in SQL, Power BI, Excel, Python and business analytics,
+            with hands-on experience building ETL pipelines using PySpark, AWS S3, Databricks and
+            Delta Lake, along with machine learning and business intelligence projects.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="projects-heading">
+            Selected Projects
+        </h2>
+
+
+        <div class="projects-grid">
+
+
+            <!-- 1 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Databricks Delta Pipeline — ETL
+                    </h3>
+
+                    <p>
+                        Built an ETL pipeline using Databricks and PySpark,
+                        transforming Bronze Delta data from AWS S3 into
+                        structured Silver and Gold datasets.
+                    </p>
+
+                    <div class="tech">
+                        Databricks · PySpark · AWS S3 · Delta Lake · SQL · Power BI
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/databricks-delta-pipeline-etl"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 2 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Machine Learning — Price Prediction & Customer Churn
+                    </h3>
+
+                    <p>
+                        Predictive analytics projects covering price prediction,
+                        customer churn, feature engineering, model training
+                        and evaluation.
+                    </p>
+
+                    <div class="tech">
+                        Python · Pandas · Scikit-learn · Machine Learning
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/Machine-Learning-Projects-Price-Prediction-Customer-Churn"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 3 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Amazon Review Sentiment Analysis
+                    </h3>
+
+                    <p>
+                        Built a sentiment-analysis pipeline using PySpark,
+                        NLP and BERT fine-tuning to classify customer reviews
+                        and identify sentiment patterns.
+                    </p>
+
+                    <div class="tech">
+                        PySpark · NLP · BERT · Python · Machine Learning
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/Amazon-Review-Sentiment-Analysis-PySpark-NLP-BERT-Fine-Tuning"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 4 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        K-Means Game Sales Segmentation
+                    </h3>
+
+                    <p>
+                        Applied K-Means clustering to segment video-game
+                        sales data and identify meaningful market segments.
+                    </p>
+
+                    <div class="tech">
+                        Python · Pandas · K-Means · Clustering · EDA
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/KMeans_Clustering_GameSales_Segmentation"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 5 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Defect Detection in Hot Rolling
+                    </h3>
+
+                    <p>
+                        Machine learning project focused on identifying
+                        manufacturing defects from hot-rolling process data.
+                    </p>
+
+                    <div class="tech">
+                        Python · Machine Learning · EDA · Classification
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/Defect-Detection-in-Hot-Rolling"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 6 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Swiggy Power BI Dashboard
+                    </h3>
+
+                    <p>
+                        Interactive Power BI dashboard analyzing restaurants,
+                        ratings, delivery time, pricing, cities and cuisine
+                        performance.
+                    </p>
+
+                    <div class="tech">
+                        Power BI · DAX · Visualization · Business Analytics
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/Swiggy-Power-BI-Dashboard"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 7 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Tableau Business Intelligence Projects
+                    </h3>
+
+                    <p>
+                        Business intelligence and reporting projects covering
+                        KPI analysis, dashboards, performance reporting and
+                        data-driven insights.
+                    </p>
+
+                    <div class="tech">
+                        Tableau · SQL · BI · Business Analytics
+                    </div>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="https://github.com/rajhere097/tableau-business-intelligence-projectsreport"
+                    target="_blank"
+                >
+                    View GitHub
+                </a>
+
+            </article>
+
+
+            <!-- 8 -->
+
+            <article class="project-card">
+
+                <div>
+
+                    <h3>
+                        Electric Vehicle Data Analysis
+                    </h3>
+
+                    <p>
+                        Analyzed electric vehicle data using Python and
+                        object-oriented programming with data cleaning,
+                        exploratory analysis and visualization.
+                    </p>
+
+                    <div class="tech">
+                        Python · OOP · Pandas · EDA · Visualization
+                    </div>
+
+                </div>
+
+                <!-- Replace # with the actual EV repository URL -->
+
+                <a
+                    class="btn"
+                    href="#"
+                >
+                    View Project
+                </a>
+
+            </article>
+
+
         </div>
 
-    </header>
+    </section>
 
+</main>
 
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="https://github.com/rajhere097" target="_blank">GitHub</a>
-        <a href="mailto:your-email@example.com">Contact</a>
-    </nav>
+<!-- =========================
+     SKILLS
+========================= -->
 
+<footer
+    class="skills"
+    id="skills"
+>
 
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
+    <span class="skill">SQL</span>
 
-    <main class="main">
+    <span class="skill">Power BI</span>
 
-        <!-- ABOUT -->
+    <span class="skill">Excel</span>
 
-        <section class="about" id="about">
+    <span class="skill">Python</span>
 
-            <h2>About Me</h2>
+    <span class="skill">PySpark</span>
 
-            <p>
-                Data Analyst with experience in SQL, Power BI, Excel, Python and business analytics,
-                with hands-on experience building ETL pipelines using PySpark, AWS S3, Databricks
-                and Delta Lake, along with machine learning and business intelligence projects.
-            </p>
+    <span class="skill">Databricks</span>
 
-        </section>
+    <span class="skill">Delta Lake</span>
 
+    <span class="skill">AWS S3</span>
 
-        <!-- PROJECTS -->
+    <span class="skill">Machine Learning</span>
 
-        <section id="projects">
-
-            <h2 class="projects-title">Selected Projects</h2>
-
-            <div class="projects-grid">
-
-
-                <!-- 1. DATABRICKS -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Databricks Delta Pipeline — ETL</h3>
-
-                        <p>
-                            Built an ETL pipeline using Databricks and PySpark,
-                            transforming Bronze Delta data from AWS S3 into
-                            structured Silver and Gold datasets for analytics.
-                        </p>
-
-                        <div class="tech">
-                            Databricks · PySpark · AWS S3 · Delta Lake · SQL · Power BI
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/databricks-delta-pipeline-etl"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 2. MACHINE LEARNING -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Machine Learning Projects — Price Prediction & Customer Churn</h3>
-
-                        <p>
-                            Predictive analytics projects covering price prediction,
-                            customer churn, feature engineering, model training
-                            and evaluation.
-                        </p>
-
-                        <div class="tech">
-                            Python · Pandas · Scikit-learn · Machine Learning
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/Machine-Learning-Projects-Price-Prediction-Customer-Churn"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 3. AMAZON NLP -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Amazon Review Sentiment Analysis</h3>
-
-                        <p>
-                            Built a sentiment-analysis pipeline using PySpark,
-                            NLP and BERT fine-tuning to classify customer reviews
-                            and identify sentiment patterns.
-                        </p>
-
-                        <div class="tech">
-                            PySpark · NLP · BERT · Python · Machine Learning
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/Amazon-Review-Sentiment-Analysis-PySpark-NLP-BERT-Fine-Tuning"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 4. KMEANS -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>K-Means Game Sales Segmentation</h3>
-
-                        <p>
-                            Applied K-Means clustering to segment video-game
-                            sales data and identify meaningful customer or
-                            market segments.
-                        </p>
-
-                        <div class="tech">
-                            Python · Pandas · K-Means · Clustering · EDA
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/KMeans_Clustering_GameSales_Segmentation"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 5. HOT ROLLING -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Defect Detection in Hot Rolling</h3>
-
-                        <p>
-                            Machine learning project focused on identifying
-                            manufacturing defects from hot-rolling process data
-                            using analytical and predictive techniques.
-                        </p>
-
-                        <div class="tech">
-                            Python · Machine Learning · EDA · Classification
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/Defect-Detection-in-Hot-Rolling"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 6. SWIGGY -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Swiggy Power BI Dashboard</h3>
-
-                        <p>
-                            Interactive Power BI dashboard analyzing restaurants,
-                            ratings, delivery time, pricing, cities and cuisine-level
-                            performance.
-                        </p>
-
-                        <div class="tech">
-                            Power BI · DAX · Data Visualization · Business Analytics
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/Swiggy-Power-BI-Dashboard"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 7. TABLEAU / BUSINESS ANALYTICS -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Tableau Business Intelligence Projects</h3>
-
-                        <p>
-                            Business intelligence and reporting projects focused
-                            on KPI analysis, dashboards, business performance
-                            and data-driven insights.
-                        </p>
-
-                        <div class="tech">
-                            Tableau · SQL · Business Intelligence · Analytics
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/tableau-business-intelligence-projectsreport"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-
-                <!-- 8. EV -->
-
-                <div class="project-card">
-
-                    <div>
-                        <h3>Electric Vehicle Data Analysis</h3>
-
-                        <p>
-                            Analyzed electric vehicle data using Python and
-                            object-oriented programming, applying data cleaning,
-                            EDA and visualization.
-                        </p>
-
-                        <div class="tech">
-                            Python · OOP · Pandas · EDA · Visualization
-                        </div>
-                    </div>
-
-                    <a class="btn"
-                       href="https://github.com/rajhere097/Electric-Vehicle-Data-Analysis-Python-OOP"
-                       target="_blank">
-                        View GitHub
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         SKILLS
-         ========================= -->
-
-    <footer class="skills" id="skills">
-
-        <span class="skill">SQL</span>
-        <span class="skill">Power BI</span>
-        <span class="skill">Excel</span>
-        <span class="skill">Python</span>
-        <span class="skill">PySpark</span>
-        <span class="skill">Databricks</span>
-        <span class="skill">Delta Lake</span>
-        <span class="skill">AWS S3</span>
-        <span class="skill">Machine Learning</span>
-
-    </footer>
+</footer>
 
 </body>
 </html>
